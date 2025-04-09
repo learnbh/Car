@@ -12,9 +12,9 @@ class CarInspectionServiceTest {
     CarInspectionService carInspectionService;
     @BeforeEach
     void setUp() {
-        carCorrect = new Car(4, 3, true, true);
-        carCorrect1 = new Car(4, 5, true, true);
-        carIncorrect = new Car(5, 0, false, false);
+        carCorrect = new Car("01", "Mercedes", 4, 3, true, true);
+        carCorrect1 = new Car("02", "Audi", 4, 5, true, true);
+        carIncorrect = new Car("03", "Toyota", 5, 0, false, false);
         carInspectionService = new CarInspectionService();
     }
     @Test
