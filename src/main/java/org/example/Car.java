@@ -2,20 +2,29 @@ package org.example;
 
 import java.util.Objects;
 
-public class Car {
+public class Car extends Vehicle {
     private int numberOfTires;
     private int numberOfDoors;
     private boolean seatBelt;
     private boolean airBag;
 
-    public Car() {
+    public Car(String id, String name) {
+        super(id, name);
     }
 
-    public Car(int numberOfTires, int numberOfDoors, boolean seatBelt, boolean airBag) {
+    public Car(String id, String name, int numberOfTires, int numberOfDoors, boolean seatBelt, boolean airBag) {
+        super(id, name);
         this.numberOfTires = numberOfTires;
         this.numberOfDoors = numberOfDoors;
         this.seatBelt = seatBelt;
         this.airBag = airBag;
+    }
+
+    @Override
+    public int accelerate(int kmh) {
+        setVelocity(getVelocity()+kmh);
+        System.out.println(getVelocity());
+        return getVelocity();
     }
 
     @Override
